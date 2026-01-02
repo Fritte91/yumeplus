@@ -1,0 +1,88 @@
+import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { LanguageToggle } from './LanguageToggle';
+
+export const Header = () => {
+  const { translations } = useLanguage();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    document.body.style.overflow = !mobileMenuOpen ? 'hidden' : 'auto';
+  };
+
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  return (
+    <>
+      <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-brand-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20">
+            <div className="flex-shrink-0 flex items-center gap-2">
+              <a href="/" className="font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900">
+                Yume Plus<span className="text-accent-600 text-xs align-top ml-1 font-sans font-medium">Seafood & Sushi</span>
+              </a>
+            </div>
+
+            <nav className="hidden md:flex space-x-8 items-center">
+              <a href="#about" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+                {translations.nav.experience}
+              </a>
+              <a href="#menu" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+                {translations.nav.menu}
+              </a>
+              <a href="#prices" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+                {translations.nav.pricing}
+              </a>
+              <a href="#location" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+                {translations.nav.location}
+              </a>
+            </nav>
+
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <a href="#location" className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-medium rounded-full text-white bg-brand-900 hover:bg-brand-800 transition shadow-soft">
+                {translations.nav.bookTable}
+              </a>
+              <button
+                onClick={toggleMenu}
+                className="md:hidden p-2 text-brand-500 hover:text-brand-900"
+                aria-label="Toggle menu"
+                aria-expanded={mobileMenuOpen}
+              >
+                <span className="iconify" data-icon="lucide:menu" data-width="24" data-height="24" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className={`fixed inset-0 z-40 bg-white flex flex-col pt-20 px-6 gap-6 md:hidden transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} aria-hidden={!mobileMenuOpen}>
+        <button onClick={closeMenu} className="absolute top-4 right-4 p-2 text-brand-500" aria-label="Close menu">
+          <span className="iconify" data-icon="lucide:x" data-width="24" data-height="24" aria-hidden="true"></span>
+        </button>
+        <a href="#about" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+          {translations.nav.experience}
+        </a>
+        <a href="#menu" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+          {translations.nav.menu}
+        </a>
+        <a href="#prices" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+          {translations.nav.pricing}
+        </a>
+        <a href="#location" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+          {translations.nav.location}
+        </a>
+        <div className="mt-4 pt-6 border-t border-brand-100">
+          <a href="tel:+66982878284" className="flex items-center gap-3 text-accent-600 py-2">
+            <span className="iconify" data-icon="lucide:phone" data-width="20"></span> +66 98 287 8284
+          </a>
+        </div>
+      </div>
+    </>
+  );
+};
+
