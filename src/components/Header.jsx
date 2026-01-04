@@ -24,7 +24,7 @@ export const Header = () => {
             <div className="flex-shrink-0 flex items-center gap-2">
               <a href="/" className="flex items-center gap-2.5 font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
                 <img 
-                  src="/yumelogo.jpg" 
+                  src="/yumelogo.png" 
                   alt="Yume Plus Logo" 
                   className="h-12 sm:h-14 w-auto object-contain flex-shrink-0"
                 />
