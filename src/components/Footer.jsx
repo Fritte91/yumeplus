@@ -39,6 +39,24 @@ export const Footer = () => {
       <div className="text-center text-xs text-brand-400 mt-8">
         {translations.footer.copyright}
       </div>
+      
+      {/* Bangkok Boost Studios Credit */}
+      <div className="text-center mt-8 pt-8 border-t border-brand-200/50">
+        <a 
+          href="https://bkkboost.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs text-brand-400 hover:text-brand-600 transition-colors duration-300 group"
+        >
+          <span className="text-brand-500 group-hover:text-brand-700">Managed & distributed by</span>
+          <img 
+            src="/112.png" 
+            alt="Bangkok Boost Studios" 
+            className="h-5 w-auto opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+          />
+          <span className="font-medium text-brand-500 group-hover:text-brand-700">Bangkok Boost Studios</span>
+        </a>
+      </div>
     </footer>
   );
 };
