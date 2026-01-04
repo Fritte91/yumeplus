@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    font-family: "Prompt", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+}
+
 /* Fade In Up Animation */
 @keyframes fadeInUp {
   from {
