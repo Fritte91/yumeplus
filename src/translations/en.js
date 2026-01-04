@@ -10,6 +10,7 @@ export const en = {
   nav: {
     experience: "Experience",
     menu: "Buffet Menu",
+    salmonCakes: "Salmon Cakes",
     pricing: "Pricing",
     location: "Location",
     bookTable: "Book Table"
@@ -233,6 +234,58 @@ platinumFeatures: [
       nameMinLength: "Name must be at least 2 characters",
       phoneRequired: "Please enter your phone number",
       phoneInvalid: "Please enter a valid phone number"
+    }
+  },
+  // Salmon Cakes
+  salmonCakes: {
+    sectionTitle: "Salmon Cakes for Special Occasions",
+    sectionSubtitle: "Made-to-order premium salmon 'cake' platters for birthdays, anniversaries, and special surprises",
+    preOrderLine: "Pre-order on LINE",
+    viewDetails: "View details",
+    pageTitle: "Salmon Cakes for Special Occasions",
+    pageSubtitle: "Celebrate your special moments with our beautifully crafted salmon cake platters",
+    features: [
+      "Premium fresh salmon, hand-selected daily",
+      "Customizable designs for any occasion",
+      "Made-to-order with 48-hour advance notice",
+      "Perfect for birthdays, anniversaries, and celebrations",
+      "Elegant presentation that impresses"
+    ],
+    howToOrder: {
+      title: "How to Order",
+      step1: {
+        title: "Contact Us",
+        description: "Reach out via LINE at least 48 hours before your event"
+      },
+      step2: {
+        title: "Customize",
+        description: "Discuss your preferences, occasion, and serving size"
+      },
+      step3: {
+        title: "Confirm & Enjoy",
+        description: "We'll prepare your special salmon cake and have it ready for pickup"
+      }
+    },
+    gallery: {
+      title: "Gallery",
+      items: [
+        {
+          title: "Classic Salmon Cake",
+          caption: "Our signature design with premium salmon"
+        },
+        {
+          title: "Celebration Platter",
+          caption: "Perfect for special occasions"
+        },
+        {
+          title: "Custom Design",
+          caption: "Personalized to match your celebration"
+        },
+        {
+          title: "Premium Selection",
+          caption: "Top-grade salmon, beautifully arranged"
+        }
+      ]
     }
   }
 };

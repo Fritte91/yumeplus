@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
 import { BookTableModal } from './BookTableModal';
@@ -24,7 +25,7 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex-shrink-0 flex items-center gap-2">
-              <a href="/" className="flex items-center gap-2.5 font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
+              <Link to="/" className="flex items-center gap-2.5 font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
                 <img 
                   src="/yumelogo.png" 
                   alt="Yume Plus Logo" 
@@ -32,7 +33,7 @@ export const Header = () => {
                 />
                 <span className="group-hover:text-luxury-gold transition-colors duration-300">Yume Plus</span>
                 <span className="text-luxury-gold text-xs align-top ml-1 font-sans font-medium">Seafood & Sushi</span>
-              </a>
+              </Link>
             </div>
 
             <nav className="hidden md:flex space-x-8 items-center">
@@ -42,6 +43,9 @@ export const Header = () => {
               <a href="#menu" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
                 {translations.nav.menu}
               </a>
+              <Link to="/salmon-cakes" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+                {translations.nav.salmonCakes || 'Salmon Cakes'}
+              </Link>
               <a href="#prices" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
                 {translations.nav.pricing}
               </a>
@@ -84,6 +88,9 @@ export const Header = () => {
         <a href="#menu" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
           {translations.nav.menu}
         </a>
+        <Link to="/salmon-cakes" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+          {translations.nav.salmonCakes || 'Salmon Cakes'}
+        </Link>
         <a href="#prices" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
           {translations.nav.pricing}
         </a>

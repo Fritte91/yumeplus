@@ -7,6 +7,8 @@
 export const links = {
   // Line Official Account - Replace with your actual Line OA URL (e.g., https://lin.ee/xxxxx or https://page.line.me/xxxxx)
   lineOfficial: 'https://lin.ee/YOUR_LINE_ID',
+  // LINE Chat URL for CTAs (reuse lineOfficial or set a specific chat URL)
+  LINE_CHAT_URL: 'https://lin.ee/YOUR_LINE_ID',
   
   // Facebook Page - Replace with your Facebook page URL
   facebook: 'https://www.facebook.com/profile.php?id=100077266609182',
