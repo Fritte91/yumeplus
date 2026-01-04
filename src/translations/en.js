@@ -72,22 +72,25 @@ export const en = {
     ],
   
     premiumTier: "Premium",
-    premiumFeatures: [
-      "Premium sashimi",
-      "Special sushi & rolls",
-      "Upgraded hot dishes",
-      "Better shabu meat selections",
-      "Exclusive menu items"
-    ],
-  
-    platinumTier: "Platinum",
-    platinumFeatures: [
-      "Top-grade sashimi",
-      "Premium sushi",
-      "Australian beef",
-      "Exclusive chef selections",
-      "Full shabu offerings"
-    ],
+premiumFeatures: [
+  "Premium sashimi",
+  "Special sushi & rolls",
+  "Upgraded hot dishes",
+  "Better shabu meat selections",
+  "Exclusive menu items",
+  "Unlimited draft beer"
+],
+
+platinumTier: "Platinum",
+platinumFeatures: [
+  "Top-grade sashimi",
+  "Premium sushi",
+  "Australian beef",
+  "Exclusive chef selections",
+  "Full shabu offerings",
+  "Unlimited draft beer"
+],
+
   
     mostPopular: "Most Popular",
     promotion: "Special Offer",
