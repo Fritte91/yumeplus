@@ -18,12 +18,13 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-brand-200">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/95 border-b border-brand-200 shadow-soft bg-luxury-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex-shrink-0 flex items-center gap-2">
-              <a href="/" className="font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900">
-                Yume Plus<span className="text-accent-600 text-xs align-top ml-1 font-sans font-medium">Seafood & Sushi</span>
+              <a href="/" className="font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
+                <span className="group-hover:text-luxury-gold transition-colors duration-300">Yume Plus</span>
+                <span className="text-luxury-gold text-xs align-top ml-1 font-sans font-medium">Seafood & Sushi</span>
               </a>
             </div>
 
@@ -44,7 +45,7 @@ export const Header = () => {
 
             <div className="flex items-center gap-4">
               <LanguageToggle />
-              <a href="#location" className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-medium rounded-full text-white bg-brand-900 hover:bg-brand-800 transition shadow-soft">
+              <a href="#location" className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs sm:text-sm font-medium rounded-full text-white bg-brand-900 hover:bg-luxury-gold transition-all duration-300 shadow-soft hover:shadow-gold gold-glow-hover">
                 {translations.nav.bookTable}
               </a>
               <button

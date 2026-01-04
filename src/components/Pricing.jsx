@@ -7,29 +7,34 @@ export const Pricing = () => {
     {
       price: '399',
       name: translations.pricing.classicTier,
-      description: translations.pricing.classicDescription
+      features: translations.pricing.classicFeatures
     },
     {
       price: '599',
       name: translations.pricing.goldTier,
-      description: translations.pricing.goldDescription
+      features: translations.pricing.goldFeatures
     },
     {
       price: '799',
       name: translations.pricing.premiumTier,
-      description: translations.pricing.premiumDescription,
+      features: translations.pricing.premiumFeatures,
       mostPopular: true
     },
     {
       price: '1,099',
       name: translations.pricing.platinumTier,
-      description: translations.pricing.platinumDescription
+      features: translations.pricing.platinumFeatures
     }
   ];
 
   return (
-    <section id="prices" className="py-24 bg-brand-50 border-t border-brand-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="prices" className="py-24 bg-gradient-to-b from-gold-50/40 via-gold-100/30 to-gold-50/40 border-t border-brand-200 relative bg-luxury-pattern overflow-hidden">
+      {/* Decorative gold accent */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-30"></div>
+      {/* Decorative background blobs */}
+      <div className="absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-luxury-gold/8 to-transparent rounded-full blur-3xl -translate-x-1/2"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-l from-gold-200/10 to-transparent rounded-full blur-3xl translate-x-1/2"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl text-brand-900 tracking-tight mb-4">
@@ -46,23 +51,29 @@ export const Pricing = () => {
             <div
               key={index}
               className={`
-                group relative bg-white rounded-2xl border border-brand-100 p-8
-                transition-all duration-300 hover:shadow-lg hover:border-brand-200
-                ${tier.mostPopular ? 'ring-2 ring-accent-200 ring-offset-2 ring-offset-brand-50 bg-accent-50/30' : ''}
+                group relative bg-gradient-to-br from-white to-gold-50/20 rounded-2xl border border-brand-100 p-8 luxury-card
+                ${tier.mostPopular ? 'ring-2 ring-luxury-gold ring-offset-2 ring-offset-brand-50 bg-gradient-to-br from-gold-50/60 to-white border-luxury-gold/30' : 'hover:border-luxury-gold/40'}
               `}
             >
               {/* Most Popular Badge */}
               {tier.mostPopular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-accent-600 text-white px-3 py-1 rounded-full text-xs font-medium shadow-sm" aria-label="Most popular option">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                  <span className="luxury-badge text-luxury-gold-dark px-4 py-1.5 rounded-full text-xs font-semibold shadow-gold uppercase tracking-wider" aria-label="Most popular option">
                     {translations.pricing.mostPopular}
                   </span>
                 </div>
               )}
+              
+              {/* Gold accent line for premium tiers */}
+              {(tier.price === '799' || tier.price === '1,099') && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-60 rounded-t-2xl"></div>
+              )}
 
               {/* Price */}
               <div className="mb-4">
-                <span className="block text-4xl sm:text-5xl font-serif font-medium text-brand-900 mb-1">
+                <span className={`block text-4xl sm:text-5xl font-serif font-medium mb-1 ${
+                  tier.mostPopular ? 'text-gold-gradient' : 'text-brand-900'
+                }`}>
                   ฿{tier.price}
                 </span>
                 <span className="block text-xs font-medium text-brand-400 uppercase tracking-wider mt-1">
@@ -75,23 +86,31 @@ export const Pricing = () => {
                 {tier.name}
               </h3>
 
-              {/* Tier Description */}
-              <p className="text-brand-500 text-sm leading-relaxed">
-                {tier.description}
-              </p>
+              {/* Tier Features List */}
+              <ul className="space-y-2">
+                {tier.features && tier.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-brand-500 text-sm leading-relaxed flex items-start">
+                    <span className="text-luxury-gold mr-2 mt-1 flex-shrink-0">
+                      <span className="iconify" data-icon="lucide:check" data-width="16"></span>
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
         {/* Promotion Section */}
-        <div className="mt-12 pt-8 border-t border-brand-200 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-white border border-brand-200 rounded-full px-6 py-3 shadow-sm">
-            <span className="inline-flex items-center gap-2 text-accent-600 font-medium text-sm">
-              <span className="iconify" data-icon="lucide:tag" data-width="16"></span>
+        <div className="mt-12 pt-8 text-center">
+          <div className="section-divider mb-8"></div>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 luxury-badge rounded-full px-8 py-4 shadow-gold">
+            <span className="inline-flex items-center gap-2 text-luxury-gold-dark font-semibold text-sm">
+              <span className="iconify" data-icon="lucide:tag" data-width="18"></span>
               {translations.pricing.promotion}
             </span>
-            <span className="hidden sm:block text-brand-300">•</span>
-            <p className="text-brand-600 text-sm sm:text-base">
+            <span className="hidden sm:block text-luxury-gold opacity-50">•</span>
+            <p className="text-brand-700 text-sm sm:text-base font-medium">
               {translations.pricing.promoText}
             </p>
           </div>

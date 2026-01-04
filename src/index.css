@@ -55,3 +55,207 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Luxury Background Patterns - Much More Visible */
+.bg-luxury-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.15) 1px, transparent 0),
+    radial-gradient(circle at 12px 12px, rgba(244, 228, 188, 0.08) 1px, transparent 0);
+  background-size: 24px 24px, 48px 48px;
+  background-color: #faf8f3;
+}
+
+.bg-luxury-grid {
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(244, 228, 188, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 228, 188, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 80px 80px, 80px 80px;
+  background-color: #f9f6f0;
+}
+
+.bg-luxury-texture {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(212, 175, 55, 0.08) 10px,
+      rgba(212, 175, 55, 0.08) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(244, 228, 188, 0.05) 10px,
+      rgba(244, 228, 188, 0.05) 20px
+    );
+  background-color: #f7f4ed;
+}
+
+/* Luxury Section Background - Much More Visible */
+.bg-luxury-section {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(244, 228, 188, 0.10) 0%, transparent 60%),
+    radial-gradient(circle at 50% 20%, rgba(250, 245, 235, 0.6) 0%, transparent 40%),
+    linear-gradient(135deg, #fefdfb 0%, #faf8f3 50%, #f5f3ed 100%);
+}
+
+/* Warm off-white backgrounds - Much More Visible */
+.bg-warm-white {
+  background: linear-gradient(135deg, #faf8f3 0%, #f5f3ed 50%, #faf8f3 100%);
+}
+
+.bg-cream {
+  background: linear-gradient(135deg, #f9f6f0 0%, #f4f1e8 50%, #f9f6f0 100%);
+}
+
+.bg-warm-beige {
+  background: linear-gradient(135deg, #f7f4ed 0%, #f2efe5 50%, #f7f4ed 100%);
+}
+
+.bg-gold-tint {
+  background: linear-gradient(135deg, #fef9f0 0%, #faf5e8 50%, #fef9f0 100%);
+}
+
+.bg-ivory {
+  background: linear-gradient(135deg, #faf9f5 0%, #f5f3ed 50%, #faf9f5 100%);
+}
+
+/* Paper texture effect */
+.bg-paper-texture {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(212, 175, 55, 0.02) 0%, transparent 100%);
+  background-color: #fefefe;
+}
+
+/* Subtle diagonal stripes */
+.bg-diagonal-stripes {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(212, 175, 55, 0.03) 35px,
+      rgba(212, 175, 55, 0.03) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(244, 228, 188, 0.02) 35px,
+      rgba(244, 228, 188, 0.02) 70px
+    );
+  background-color: #fefefe;
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury Border Gradient */
+.border-luxury {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(244, 228, 188, 0.2)) 1;
+}
+
+/* Elegant Section Divider */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.2) 20%,
+    rgba(212, 175, 55, 0.3) 50%,
+    rgba(212, 175, 55, 0.2) 80%,
+    transparent
+  );
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.section-divider::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-divider::after {
+  right: 0;
+}
+
+/* Luxury Scrollbar */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #d4af37, #f4e4bc);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #b8941f, #d4af37);
+}
+
+/* Gold Glow Effect */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Luxury Card Hover */
+.luxury-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.15);
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Luxury Badge */
+.luxury-badge {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(244, 228, 188, 0.1));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+}
+

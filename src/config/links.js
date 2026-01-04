@@ -9,7 +9,7 @@ export const links = {
   lineOfficial: 'https://lin.ee/YOUR_LINE_ID',
   
   // Facebook Page - Replace with your Facebook page URL
-  facebook: 'https://www.facebook.com/YOUR_PAGE',
+  facebook: 'https://www.facebook.com/profile.php?id=100077266609182',
   
   // Facebook Messenger - Replace with your Messenger link (m.me/yourpage)
   messenger: 'https://m.me/YOUR_PAGE',
@@ -17,10 +17,14 @@ export const links = {
   // Instagram - Replace with your Instagram profile URL
   instagram: 'https://www.instagram.com/YOUR_PROFILE',
   
-  // Menu PDF - Replace with URL to your menu PDF file
-  menuPDF: '#',
+  // Menu PDF - Path to menu PDF file in public folder
+  menuPDF: '/menudl.pdf',
   
   // Google Maps direct link (already correct)
   googleMaps: 'https://maps.app.goo.gl/DYXtX5V3siRfNpBb6',
+  
+  // Google Reviews - Replace with your Google Business Reviews URL
+  // You can find this by going to your Google Business Profile and copying the reviews section URL
+  googleReviews: 'https://maps.app.goo.gl/AS8NeU3sdtrnJfYKA',
 };
 

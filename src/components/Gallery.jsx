@@ -28,8 +28,12 @@ export const Gallery = () => {
   ];
 
   return (
-    <section className="py-24 overflow-hidden bg-brand-50">
-      <div className="max-w-7xl mx-auto px-4 mb-8">
+    <section className="py-24 overflow-hidden bg-gradient-to-b from-gold-tint via-warm-white to-gold-tint relative bg-luxury-pattern">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20"></div>
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-luxury-gold/7 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-gold-200/6 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      <div className="max-w-7xl mx-auto px-4 mb-8 relative z-10">
         <h2 className="font-serif text-3xl sm:text-4xl text-brand-900 tracking-tight">
           {translations.gallery.title}
         </h2>
@@ -42,7 +46,7 @@ export const Gallery = () => {
             <ImageWithFallback
               src={item.image}
               alt={item.alt}
-              className="rounded-xl h-64 w-full object-cover shadow-soft border border-brand-200"
+              className="rounded-xl h-64 w-full object-cover shadow-soft border border-brand-200 luxury-card hover:border-luxury-gold/30"
             />
             <p className="mt-2 text-sm text-brand-600 font-medium">{item.label}</p>
           </div>

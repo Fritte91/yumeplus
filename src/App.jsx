@@ -7,6 +7,7 @@ import { Menu } from './components/Menu';
 import { Pricing } from './components/Pricing';
 import { Amenities } from './components/Amenities';
 import { Gallery } from './components/Gallery';
+import { Reviews } from './components/Reviews';
 import { Location } from './components/Location';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -17,7 +18,7 @@ function App() {
   return (
     <LanguageProvider>
       <StructuredData />
-      <div className="bg-white text-brand-900 font-sans antialiased selection:bg-accent-100 selection:text-accent-700">
+      <div className="bg-white text-brand-900 font-sans antialiased selection:bg-gold-200 selection:text-gold-800 bg-luxury-section">
         <StatusBar />
         <Header />
         <Hero />
@@ -26,6 +27,7 @@ function App() {
         <Pricing />
         <Amenities />
         <Gallery />
+        <Reviews />
         <Location />
         <Footer />
         <ScrollToTop />

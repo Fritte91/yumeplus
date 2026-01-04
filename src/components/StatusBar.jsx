@@ -27,8 +27,9 @@ export const StatusBar = () => {
   }, [translations]);
 
   return (
-    <div className="bg-brand-50 border-b border-brand-200 text-brand-500 text-xs py-2 px-4 text-center font-medium tracking-wide">
-      <span className={`inline-block w-2 h-2 rounded-full ${status.color} mr-2 animate-pulse`}></span>
+    <div className="bg-brand-50 border-b border-brand-200 text-brand-500 text-xs py-2.5 px-4 text-center font-medium tracking-wide relative bg-luxury-pattern">
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold/20 to-transparent"></div>
+      <span className={`inline-block w-2.5 h-2.5 rounded-full ${status.color} mr-2 animate-pulse shadow-sm`}></span>
       <span>{status.text}</span> • {translations.status.hours}
     </div>
   );

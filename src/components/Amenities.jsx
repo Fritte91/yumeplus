@@ -13,7 +13,8 @@ export const Amenities = () => {
   ];
 
   return (
-    <section className="py-20 bg-white border-t border-brand-100">
+    <section className="py-20 bg-ivory border-t border-brand-100 relative">
+      <div className="section-divider mb-12"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-serif text-3xl text-center text-brand-900 tracking-tight mb-12">
           {translations.amenities.title}
@@ -22,10 +23,10 @@ export const Amenities = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6">
           {amenities.map((amenity, index) => (
             <div key={index} className="flex flex-col items-center gap-2 text-center group">
-              <div className="w-12 h-12 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-600 group-hover:border-accent-500 group-hover:text-accent-600 transition" aria-hidden="true">
-                <span className="iconify" data-icon={amenity.icon} data-width="20"></span>
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gold-50 to-white border border-luxury-gold/20 flex items-center justify-center text-brand-600 group-hover:border-luxury-gold group-hover:text-luxury-gold group-hover:scale-110 transition-all duration-300 shadow-sm group-hover:shadow-gold" aria-hidden="true">
+                <span className="iconify" data-icon={amenity.icon} data-width="22"></span>
               </div>
-              <span className="text-sm font-medium text-brand-500">{amenity.label}</span>
+              <span className="text-sm font-medium text-brand-500 group-hover:text-brand-900 transition-colors">{amenity.label}</span>
             </div>
           ))}
         </div>

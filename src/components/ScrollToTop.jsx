@@ -28,10 +28,10 @@ export const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-brand-900 text-white rounded-full shadow-lg hover:bg-brand-800 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-900 focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 p-3.5 bg-brand-900 text-white rounded-full shadow-luxury hover:bg-luxury-gold transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-luxury-gold focus:ring-offset-2 gold-glow-hover border border-luxury-gold/30"
           aria-label="Scroll to top"
         >
-          <span className="iconify" data-icon="lucide:arrow-up" data-width="24"></span>
+          <span className="iconify" data-icon="lucide:arrow-up" data-width="22"></span>
         </button>
       )}
     </>

@@ -5,8 +5,9 @@ export const Location = () => {
   const { translations } = useLanguage();
 
   return (
-    <section id="location" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="location" className="py-24 bg-warm-beige relative bg-luxury-texture">
+      <div className="section-divider mb-12"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col justify-center">
             <h2 className="font-serif text-3xl text-brand-900 tracking-tight mb-6">
@@ -23,7 +24,7 @@ export const Location = () => {
             <div className="flex flex-col gap-4 items-start w-full sm:w-2/3">
               <a
                 href="tel:+66982878284"
-                className="w-full flex items-center justify-center gap-3 text-brand-900 bg-brand-50 border border-brand-200 hover:bg-brand-100 py-3 rounded-lg font-medium transition"
+                className="w-full flex items-center justify-center gap-3 text-brand-900 bg-gradient-to-r from-gold-50 to-white border border-luxury-gold/30 hover:border-luxury-gold hover:bg-gold-100 py-3 rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow-gold luxury-card"
               >
                 <span className="iconify" data-icon="lucide:phone" data-width="20"></span>
                 <span>{translations.location.phone}</span>

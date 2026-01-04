@@ -49,19 +49,50 @@ export const en = {
   // Pricing
   pricing: {
     title: "Choose Your Experience",
-    description: "All tiers include unlimited beverages and desserts. 90 minutes of dining time.",
+    description:
+      "All packages include unlimited food, desserts, beverages, and beer. Dining time: 120 minutes. Last order: 90 minutes.",
+  
     classicTier: "Classic",
-    classicDescription: "Our signature sushi selection, chef specials, and premium cuts.",
+    classicFeatures: [
+      "A perfect introduction to our menu",
+      "Basic sushi and rolls",
+      "Salads and hot dishes",
+      "Shabu items",
+      "Desserts"
+    ],
+  
     goldTier: "Gold",
-    goldDescription: "Expanded selection with imported sashimi and chef's daily creations.",
+    goldFeatures: [
+      "Our most popular choice",
+      "Expanded sushi selection",
+      "Sashimi and hand rolls",
+      "Hot dishes and shabu ingredients",
+      "Desserts"
+    ],
+  
     premiumTier: "Premium",
-    premiumDescription: "Full access to all dishes, premium selections, and unlimited beer.",
+    premiumFeatures: [
+      "Premium sashimi",
+      "Special sushi & rolls",
+      "Upgraded hot dishes",
+      "Better shabu meat selections",
+      "Exclusive menu items"
+    ],
+  
     platinumTier: "Platinum",
-    platinumDescription: "Complete access to all offerings, including exclusive chef selections.",
+    platinumFeatures: [
+      "Top-grade sashimi",
+      "Premium sushi",
+      "Australian beef",
+      "Exclusive chef selections",
+      "Full shabu offerings"
+    ],
+  
     mostPopular: "Most Popular",
     promotion: "Special Offer",
-    promoText: "Come 4 Pay 3! Valid every weekday lunch (11:00 - 15:00)."
-  },
+    promoText: "Come 4 Pay 3! Valid every weekday lunch (11:00 – 15:00)."
+  }  
+  ,
   // Amenities
   amenities: {
     title: "Dining Comfort",
@@ -91,6 +122,13 @@ export const en = {
     bookLine: "Book via Line",
     messenger: "Messenger",
     mapLabel: "Yume Plus Sushi"
+  },
+  // Reviews
+  reviews: {
+    badge: "Customer Reviews",
+    title: "What Our Guests Say",
+    description: "Real experiences from diners who have enjoyed our premium buffet.",
+    viewAll: "View All Reviews on Google"
   },
   // Footer
   footer: {

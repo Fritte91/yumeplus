@@ -5,7 +5,10 @@ export const About = () => {
   const { translations } = useLanguage();
 
   return (
-    <section id="about" className="py-24 bg-white relative">
+    <section id="about" className="py-24 bg-warm-beige relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-luxury-gold/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-gold-200/8 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1">
@@ -24,15 +27,15 @@ export const About = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 bg-brand-50 border border-brand-100 rounded-xl">
-                <span className="iconify text-accent-600 mb-2" data-icon="lucide:flame" data-width="24" aria-hidden="true"></span>
+              <div className="p-6 bg-gradient-to-br from-gold-50/50 to-white border border-luxury-gold/20 rounded-xl luxury-card group">
+                <span className="iconify text-luxury-gold mb-3 group-hover:scale-110 transition-transform" data-icon="lucide:flame" data-width="26" aria-hidden="true"></span>
                 <h3 className="font-serif text-lg font-medium text-brand-900">
                   {translations.about.feature1Title}
                 </h3>
                 <p className="text-sm text-brand-500 mt-1">{translations.about.feature1Desc}</p>
               </div>
-              <div className="p-5 bg-brand-50 border border-brand-100 rounded-xl">
-                <span className="iconify text-accent-600 mb-2" data-icon="lucide:fish" data-width="24" aria-hidden="true"></span>
+              <div className="p-6 bg-gradient-to-br from-gold-50/50 to-white border border-luxury-gold/20 rounded-xl luxury-card group">
+                <span className="iconify text-luxury-gold mb-3 group-hover:scale-110 transition-transform" data-icon="lucide:fish" data-width="26" aria-hidden="true"></span>
                 <h3 className="font-serif text-lg font-medium text-brand-900">
                   {translations.about.feature2Title}
                 </h3>
