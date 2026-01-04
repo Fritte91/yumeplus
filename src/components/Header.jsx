@@ -22,7 +22,12 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex-shrink-0 flex items-center gap-2">
-              <a href="/" className="font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
+              <a href="/" className="flex items-center gap-2.5 font-serif text-xl sm:text-2xl font-semibold tracking-tighter text-brand-900 group">
+                <img 
+                  src="/yumelogo.jpg" 
+                  alt="Yume Plus Logo" 
+                  className="h-12 sm:h-14 w-auto object-contain flex-shrink-0"
+                />
                 <span className="group-hover:text-luxury-gold transition-colors duration-300">Yume Plus</span>
                 <span className="text-luxury-gold text-xs align-top ml-1 font-sans font-medium">Seafood & Sushi</span>
               </a>
