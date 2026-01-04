@@ -82,9 +82,8 @@ export const Reviews = () => {
                 key={review.id}
                 className="bg-gradient-to-br from-white to-gold-50/20 rounded-2xl border border-brand-100 p-6 luxury-card group hover:border-luxury-gold/40 transition-all duration-500"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
                   opacity: 0,
-                  animation: 'fadeInUp 0.8s ease-out forwards'
+                  animation: `fadeInUp 0.8s ease-out ${index * 0.1}s forwards`
                 }}
               >
                 {/* Gold accent line */}
@@ -133,9 +132,8 @@ export const Reviews = () => {
                 key={review.id}
                 className="bg-gradient-to-br from-white to-gold-50/20 rounded-2xl border border-brand-100 p-6 luxury-card group hover:border-luxury-gold/40"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
                   opacity: 0,
-                  animation: 'fadeInUp 0.8s ease-out forwards'
+                  animation: `fadeInUp 0.8s ease-out ${index * 0.1}s forwards`
                 }}
               >
                 {/* Gold accent line */}

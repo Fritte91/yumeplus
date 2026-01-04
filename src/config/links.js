@@ -26,5 +26,8 @@ export const links = {
   // Google Reviews - Replace with your Google Business Reviews URL
   // You can find this by going to your Google Business Profile and copying the reviews section URL
   googleReviews: 'https://maps.app.goo.gl/AS8NeU3sdtrnJfYKA',
+  
+  // Grab Food - Replace with your Grab Food restaurant URL
+  grabFood: 'https://food.grab.com/th/en/restaurant/YOUR_RESTAURANT_ID',
 };
 

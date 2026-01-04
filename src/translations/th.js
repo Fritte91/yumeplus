@@ -25,7 +25,8 @@ export const th = {
     descriptionHighlight: "อร่อยจริงแบบไม่ต้องพูดเยอะ",
     descriptionEnd: "",
     bookTable: "จองโต๊ะเลย",
-    lineOfficial: "แชทไลน์ร้าน"
+    lineOfficial: "แชทไลน์ร้าน",
+    grabFood: "สั่งผ่าน Grab"
   },
 
   // About
@@ -195,5 +196,48 @@ export const th = {
     menu: "เมนู",
     location: "แผนที่ร้าน",
     copyright: "© 2024 Yume Plus Sushi Dining Group. สงวนลิขสิทธิ์"
+  },
+  // Booking
+  booking: {
+    title: "จองโต๊ะ",
+    description: "กรุณากรอกข้อมูลด้านล่าง เราจะติดต่อกลับเพื่อยืนยันการจอง",
+    confirmTitle: "ยืนยันการจอง",
+    confirmDescription: "กรุณาตรวจสอบรายละเอียดการจองก่อนส่งคำขอ",
+    edit: "แก้ไข",
+    confirmSubmit: "ยืนยันและส่ง",
+    guests: "จำนวนแขก",
+    guestsPlaceholder: "1-20",
+    date: "วันที่",
+    time: "เวลา",
+    name: "ชื่อ-นามสกุล",
+    namePlaceholder: "กรอกชื่อของคุณ",
+    phone: "เบอร์โทรศัพท์",
+    phonePlaceholder: "+66 XX XXX XXXX",
+    occasion: "โอกาสพิเศษ",
+    occasionPlaceholder: "เลือกโอกาสพิเศษ (ไม่บังคับ)",
+    occasionBirthday: "วันเกิด",
+    occasionAnniversary: "วันครบรอบ",
+    occasionBusiness: "ประชุมธุรกิจ",
+    occasionCelebration: "งานฉลอง",
+    occasionOther: "อื่นๆ",
+    notes: "คำขอพิเศษ",
+    notesPlaceholder: "มีคำขอพิเศษหรือข้อจำกัดด้านอาหารไหม?",
+    disclaimer: "นี่เป็นการขอจองโต๊ะ เราจะติดต่อยืนยันผ่าน LINE หรือโทรศัพท์",
+    submit: "ส่งคำขอ",
+    cancel: "ยกเลิก",
+    close: "ปิด",
+    successTitle: "ส่งคำขอสำเร็จ!",
+    successMessage: "เราได้รับคำขอจองโต๊ะของคุณแล้ว ทีมงานจะติดต่อกลับผ่าน LINE หรือโทรศัพท์เพื่อยืนยันการจอง",
+    errors: {
+      guestsRequired: "กรุณากรอกจำนวนแขก",
+      guestsInvalid: "กรุณากรอกตัวเลขระหว่าง 1-20",
+      dateRequired: "กรุณาเลือกวันที่",
+      datePast: "กรุณาเลือกวันที่ในอนาคต",
+      timeRequired: "กรุณาเลือกเวลา",
+      nameRequired: "กรุณากรอกชื่อ",
+      nameMinLength: "ชื่อต้องมีอย่างน้อย 2 ตัวอักษร",
+      phoneRequired: "กรุณากรอกเบอร์โทรศัพท์",
+      phoneInvalid: "กรุณากรอกเบอร์โทรศัพท์ที่ถูกต้อง"
+    }
   }
 };

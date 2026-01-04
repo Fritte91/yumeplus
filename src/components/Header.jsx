@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
+import { BookTableModal } from './BookTableModal';
 
 export const Header = () => {
   const { translations } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -50,9 +52,15 @@ export const Header = () => {
 
             <div className="flex items-center gap-4">
               <LanguageToggle />
-              <a href="#location" className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs sm:text-sm font-medium rounded-full text-white bg-brand-900 hover:bg-luxury-gold transition-all duration-300 shadow-soft hover:shadow-gold gold-glow-hover">
-                {translations.nav.bookTable}
-              </a>
+              <BookTableModal
+                open={bookingModalOpen}
+                onOpenChange={setBookingModalOpen}
+                trigger={
+                  <button className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs sm:text-sm font-medium rounded-full text-white bg-brand-900 hover:bg-luxury-gold transition-all duration-300 shadow-soft hover:shadow-gold gold-glow-hover">
+                    {translations.nav.bookTable}
+                  </button>
+                }
+              />
               <button
                 onClick={toggleMenu}
                 className="md:hidden p-2 text-brand-500 hover:text-brand-900"
@@ -82,6 +90,18 @@ export const Header = () => {
         <a href="#location" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
           {translations.nav.location}
         </a>
+        <BookTableModal
+          open={bookingModalOpen}
+          onOpenChange={setBookingModalOpen}
+          trigger={
+            <button
+              onClick={closeMenu}
+              className="text-2xl font-serif font-medium text-brand-900 text-left"
+            >
+              {translations.nav.bookTable}
+            </button>
+          }
+        />
         <div className="mt-4 pt-6 border-t border-brand-100">
           <a href="tel:+66982878284" className="flex items-center gap-3 text-accent-600 py-2">
             <span className="iconify" data-icon="lucide:phone" data-width="20"></span> +66 98 287 8284

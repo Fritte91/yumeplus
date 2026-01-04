@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { ImageWithFallback } from './ImageWithFallback';
 import { links } from '../config/links';
+import { BookTableModal } from './BookTableModal';
 
 export const Hero = () => {
   const { translations } = useLanguage();
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
     <section className="relative h-[85vh] w-full overflow-hidden flex items-center justify-center">
@@ -38,13 +41,16 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up delay-300">
-          <a
-            href="#location"
-            className="w-full sm:w-auto px-8 py-3 bg-white text-brand-900 hover:bg-gold-50 rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-luxury hover:shadow-luxury-lg hover:border-luxury-gold/30 border-2 border-white group"
-          >
-            <span className="iconify group-hover:text-luxury-gold transition-colors" data-icon="lucide:calendar-check" data-width="18"></span>
-            {translations.hero.bookTable}
-          </a>
+          <BookTableModal
+            open={bookingModalOpen}
+            onOpenChange={setBookingModalOpen}
+            trigger={
+              <button className="w-full sm:w-auto px-8 py-3 bg-white text-brand-900 hover:bg-gold-50 rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-luxury hover:shadow-luxury-lg hover:border-luxury-gold/30 border-2 border-white group">
+                <span className="iconify group-hover:text-luxury-gold transition-colors" data-icon="lucide:calendar-check" data-width="18"></span>
+                {translations.hero.bookTable}
+              </button>
+            }
+          />
           <a
             href={links.lineOfficial}
             target="_blank"
@@ -54,6 +60,16 @@ export const Hero = () => {
           >
             <span className="iconify" data-icon="lucide:message-circle" data-width="18"></span>
             {translations.hero.lineOfficial}
+          </a>
+          <a
+            href={links.grabFood}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-green-600/90 to-green-500/90 hover:from-green-600 hover:to-green-500 backdrop-blur-md border border-green-500/50 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            aria-label="Order on Grab Food"
+          >
+            <span className="iconify" data-icon="lucide:shopping-bag" data-width="18"></span>
+            {translations.hero.grabFood}
           </a>
         </div>
       </div>

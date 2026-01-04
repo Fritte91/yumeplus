@@ -23,7 +23,8 @@ export const en = {
     descriptionHighlight: "A buffet where the food speaks for itself.",
     descriptionEnd: "",
     bookTable: "Book Table",
-    lineOfficial: "Line Official"
+    lineOfficial: "Line Official",
+    grabFood: "Order on Grab"
   },
   // About
   about: {
@@ -187,6 +188,49 @@ export const en = {
     menu: "Menu",
     location: "Location",
     copyright: "© 2024 Yume Plus Sushi Dining Group. All rights reserved."
+  },
+  // Booking
+  booking: {
+    title: "Request a Table",
+    description: "Fill out the form below and we'll get back to you to confirm your reservation.",
+    confirmTitle: "Confirm Your Booking",
+    confirmDescription: "Please review your booking details before submitting.",
+    edit: "Edit",
+    confirmSubmit: "Confirm & Submit",
+    guests: "Number of Guests",
+    guestsPlaceholder: "1-20",
+    date: "Date",
+    time: "Time",
+    name: "Full Name",
+    namePlaceholder: "Enter your name",
+    phone: "Phone Number",
+    phonePlaceholder: "+66 XX XXX XXXX",
+    occasion: "Occasion",
+    occasionPlaceholder: "Select an occasion (optional)",
+    occasionBirthday: "Birthday",
+    occasionAnniversary: "Anniversary",
+    occasionBusiness: "Business Meeting",
+    occasionCelebration: "Celebration",
+    occasionOther: "Other",
+    notes: "Special Requests",
+    notesPlaceholder: "Any special requests or dietary requirements?",
+    disclaimer: "This is a booking request. We'll confirm via LINE or phone.",
+    submit: "Submit Request",
+    cancel: "Cancel",
+    close: "Close",
+    successTitle: "Request Submitted!",
+    successMessage: "We've received your booking request. Our team will contact you via LINE or phone to confirm your reservation.",
+    errors: {
+      guestsRequired: "Please enter the number of guests",
+      guestsInvalid: "Please enter a number between 1 and 20",
+      dateRequired: "Please select a date",
+      datePast: "Please select a future date",
+      timeRequired: "Please select a time",
+      nameRequired: "Please enter your name",
+      nameMinLength: "Name must be at least 2 characters",
+      phoneRequired: "Please enter your phone number",
+      phoneInvalid: "Please enter a valid phone number"
+    }
   }
 };
 
