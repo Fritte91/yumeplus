@@ -299,12 +299,94 @@ export const menuItems = [
     imageAlt: { en: "Waffle served with ice cream", th: "วาฟเฟิลเสิร์ฟพร้อมไอศกรีม" },
     badge: { en: "Dessert", th: "ของหวาน" },
     tag: { en: "Sweet • Dessert", th: "หวาน • ของหวาน" }
+  },
+
+  // =========================
+  // PRE-ORDER SIGNATURE ITEMS
+  // =========================
+  {
+    id: 21,
+    category: "preorder",
+    name: { 
+      en: "Salmon Sashimi Cake (Classic Ring)", 
+      th: "แซลมอนซาชิมิเค้ก (ทรงวงคลาสสิก)" 
+    },
+    description: {
+      en: "Fresh salmon sashimi arranged in a cake-style platter for special occasions. Savory, elegant, and made-to-order.",
+      th: "แซลมอนซาชิมิจัดเป็นเค้กสำหรับโอกาสพิเศษ ไม่หวาน เป็นอาหารคาว ต้องพรีออเดอร์"
+    },
+    image: "/cake1.jpg",
+    imageAlt: { 
+      en: "Salmon sashimi cake platter", 
+      th: "แซลมอนซาชิมิเค้ก" 
+    },
+    badge: { en: "Pre-Order", th: "พรีออเดอร์" },
+    tag: { en: "Salmon • Special Order", th: "แซลมอน • สั่งทำ" }
+  },
+  {
+    id: 22,
+    category: "preorder",
+    name: { 
+      en: "Salmon Sashimi Cake (Rose Centerpiece)", 
+      th: "แซลมอนซาชิมิเค้ก (กุหลาบตรงกลาง)" 
+    },
+    description: {
+      en: "Premium salmon sashimi cake with rose centerpiece — perfect as a surprise or gift. Made-to-order.",
+      th: "เค้กแซลมอนซาชิมิจัดพรีเมียม พร้อมกุหลาบตรงกลาง เหมาะเป็นของขวัญ (ต้องพรีออเดอร์)"
+    },
+    image: "/cake2.jpg",
+    imageAlt: { 
+      en: "Salmon sashimi cake with rose centerpiece", 
+      th: "แซลมอนซาชิมิเค้กกุหลาบ" 
+    },
+    badge: { en: "Signature", th: "ซิกเนเจอร์" },
+    tag: { en: "Gift • Premium", th: "ของขวัญ • พรีเมียม" }
+  },
+  {
+    id: 23,
+    category: "preorder",
+    name: { 
+      en: "Salmon Sashimi Cake (Heart Shape)", 
+      th: "แซลมอนซาชิมิเค้ก (ทรงหัวใจ)" 
+    },
+    description: {
+      en: "Heart-shaped salmon sashimi cake designed for anniversaries and celebrations. Pre-order required.",
+      th: "เค้กแซลมอนซาชิมิทรงหัวใจ สำหรับวันครบรอบและงานฉลอง (ต้องพรีออเดอร์)"
+    },
+    image: "/cake3.jpg",
+    imageAlt: { 
+      en: "Heart-shaped salmon sashimi cake", 
+      th: "แซลมอนซาชิมิเค้กทรงหัวใจ" 
+    },
+    badge: { en: "Pre-Order", th: "พรีออเดอร์" },
+    tag: { en: "Celebration • Limited", th: "งานฉลอง • จำนวนจำกัด" }
+  },
+  {
+    id: 24,
+    category: "preorder",
+    name: { 
+      en: "Salmon Sashimi Cake (Gift Box)", 
+      th: "แซลมอนซาชิมิเค้ก (กล่องของขวัญ)" 
+    },
+    description: {
+      en: "Salmon sashimi cake presented in a gift box with ribbon — savory, elegant, and memorable.",
+      th: "เค้กแซลมอนซาชิมิจัดเป็นกล่องของขวัญ พร้อมริบบิ้น สวยพร้อมมอบ (ต้องพรีออเดอร์)"
+    },
+    image: "/cake4.jpg",
+    imageAlt: { 
+      en: "Boxed salmon sashimi cake", 
+      th: "แซลมอนซาชิมิเค้กกล่องของขวัญ" 
+    },
+    badge: { en: "Gift", th: "ของขวัญ" },
+    tag: { en: "Special • Made-to-Order", th: "พิเศษ • สั่งทำ" }
   }
+  
 ];
 
 // Category definitions (tier filters)
 export const categories = [
   { id: "all", name: { en: "All Highlights", th: "ไฮไลท์ทั้งหมด" } },
+  { id: "preorder", name: { en: "Signature Pre-Order", th: "พรีออเดอร์ซิกเนเจอร์" } },
   { id: "classic", name: { en: "Classic (399)", th: "คลาสสิก (399)" } },
   { id: "gold", name: { en: "Gold (599)", th: "โกลด์ (599)" } },
   { id: "premium", name: { en: "Premium (799)", th: "พรีเมียม (799)" } },
