@@ -6,61 +6,7 @@ export const Reviews = () => {
   const { translations } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Sample reviews data - Replace with your Google Reviews data
-  // You can fetch this from Google Places API or manually add your reviews
-  // To get Google Reviews: Use Google Places API (Place Details) or Google My Business API
-  // Format: { id, name, rating (1-5), date, text, avatar (optional initials) }
-  const reviews = [
-        {
-          id: 1,
-          name: "Pongka Galz",
-          rating: 5,
-          date: "2 months ago",
-          text: "Everything was delicious. The ingredients were very fresh, and the shrimp were naturally sweet and flavorful. The quality is excellent for the price, with many buffet options to choose from. Parking is a bit inconvenient, but the food more than makes up for it.",
-          avatar: "PG"
-        },
-        {
-          id: 2,
-          name: "Pattiya Pocapanich",
-          rating: 5,
-          date: "2 months ago",
-          text: "A hidden buffet gem that’s absolutely worth the price. The restaurant was calm and not crowded, but the food quality was outstanding. The salmon sashimi was premium, comparable to high-end restaurants. Shrimp tempura was crispy, and the shabu soup was flavorful. Excellent service from the staff.",
-          avatar: "PP"
-        },
-        {
-          id: 3,
-          name: "Kanyarat Anantasirirat",
-          rating: 5,
-          date: "3 months ago",
-          text: "The fish was very fresh and the meat had a firm, satisfying texture. Sashimi was sliced perfectly — not too thin. The restaurant was clean, the staff were attentive, and the overall experience was definitely worth the price. Highly recommended.",
-          avatar: "KA"
-        },
-        {
-          id: 4,
-          name: "Chayanisa Maunngern",
-          rating: 5,
-          date: "2 months ago",
-          text: "Extremely fresh fish with salmon cut to the perfect thickness. The texture was springy and melted in the mouth. Fried dishes were crispy and not greasy, and everything was beautifully presented. The dipping sauces were full of flavor. Perfect for lunch or a special occasion.",
-          avatar: "CM"
-        },
-        {
-          id: 5,
-          name: "Santhad Boonkwang",
-          rating: 5,
-          date: "3 months ago",
-          text: "The food was delicious and served quickly without a long wait. The staff provided excellent service, and the atmosphere was comfortable. Arriving before 4:00 PM also gives you a great discount, making it even more worth the visit.",
-          avatar: "SB"
-        },
-        {
-          id: 6,
-          name: "Local Guide",
-          rating: 5,
-          date: "6 months ago",
-          text: "I tried the 699 baht buffet including drinks, and everything was made fresh to order. Despite concerns about crowding, service was smooth and efficient. The quality of the seafood was impressive, especially for a buffet-style restaurant.",
-          avatar: "LG"
-        }
-      ];
-      
+  const reviews = translations.reviews.items;
 
   // Auto-rotate reviews on desktop
   useEffect(() => {
