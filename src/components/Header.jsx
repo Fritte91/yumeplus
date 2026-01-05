@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
 import { BookTableModal } from './BookTableModal';
@@ -9,6 +9,9 @@ export const Header = () => {
   const { translations } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [pendingHash, setPendingHash] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -18,6 +21,40 @@ export const Header = () => {
   const closeMenu = () => {
     setMobileMenuOpen(false);
     document.body.style.overflow = 'auto';
+  };
+
+  // Handle scrolling when route changes to home with a pending hash
+  useEffect(() => {
+    if (location.pathname === '/' && pendingHash) {
+      // Wait for DOM to be ready
+      const scrollToElement = () => {
+        const element = document.querySelector(pendingHash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setPendingHash(null);
+        } else {
+          // Retry if element not found yet
+          setTimeout(scrollToElement, 50);
+        }
+      };
+      scrollToElement();
+    }
+  }, [location.pathname, pendingHash]);
+
+  const handleNavClick = (hash) => {
+    closeMenu();
+    
+    if (location.pathname !== '/') {
+      // If not on homepage, navigate to home first and set pending hash
+      setPendingHash(hash);
+      navigate('/');
+    } else {
+      // If already on homepage, just scroll
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   };
 
   return (
@@ -38,21 +75,21 @@ export const Header = () => {
             </div>
 
             <nav className="hidden md:flex space-x-8 items-center">
-              <a href="#about" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+              <button onClick={() => handleNavClick('#about')} className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors bg-transparent border-none cursor-pointer">
                 {translations.nav.experience}
-              </a>
-              <a href="#menu" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+              </button>
+              <button onClick={() => handleNavClick('#menu')} className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors bg-transparent border-none cursor-pointer">
                 {translations.nav.menu}
-              </a>
+              </button>
               <Link to="/salmon-cakes" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
                 {translations.nav.salmonCakes || 'Salmon Cakes'}
               </Link>
-              <a href="#prices" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+              <button onClick={() => handleNavClick('#prices')} className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors bg-transparent border-none cursor-pointer">
                 {translations.nav.pricing}
-              </a>
-              <a href="#location" className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors">
+              </button>
+              <button onClick={() => handleNavClick('#location')} className="text-sm font-medium text-brand-500 hover:text-brand-900 transition-colors bg-transparent border-none cursor-pointer">
                 {translations.nav.location}
-              </a>
+              </button>
             </nav>
 
             <div className="flex items-center gap-4">
@@ -83,21 +120,21 @@ export const Header = () => {
         <button onClick={closeMenu} className="absolute top-4 right-4 p-2 text-brand-500" aria-label="Close menu">
           <span className="iconify" data-icon="lucide:x" data-width="24" data-height="24" aria-hidden="true"></span>
         </button>
-        <a href="#about" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+        <button onClick={() => handleNavClick('#about')} className="text-2xl font-serif font-medium text-brand-900 text-left bg-transparent border-none cursor-pointer">
           {translations.nav.experience}
-        </a>
-        <a href="#menu" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+        </button>
+        <button onClick={() => handleNavClick('#menu')} className="text-2xl font-serif font-medium text-brand-900 text-left bg-transparent border-none cursor-pointer">
           {translations.nav.menu}
-        </a>
+        </button>
         <Link to="/salmon-cakes" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
           {translations.nav.salmonCakes || 'Salmon Cakes'}
         </Link>
-        <a href="#prices" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+        <button onClick={() => handleNavClick('#prices')} className="text-2xl font-serif font-medium text-brand-900 text-left bg-transparent border-none cursor-pointer">
           {translations.nav.pricing}
-        </a>
-        <a href="#location" onClick={closeMenu} className="text-2xl font-serif font-medium text-brand-900">
+        </button>
+        <button onClick={() => handleNavClick('#location')} className="text-2xl font-serif font-medium text-brand-900 text-left bg-transparent border-none cursor-pointer">
           {translations.nav.location}
-        </a>
+        </button>
         <BookTableModal
           open={bookingModalOpen}
           onOpenChange={setBookingModalOpen}
