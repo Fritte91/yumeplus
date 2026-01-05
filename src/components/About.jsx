@@ -46,12 +46,12 @@ export const About = () => {
 
           <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
             <ImageWithFallback
-              src="/shrimp1.jpg"
+              src="/shrimp1.webp"
               alt="Fresh grilled river prawns"
               className="rounded-2xl w-full h-64 object-cover shadow-soft translate-y-8"
             />
             <ImageWithFallback
-              src="/sushi8.jpg"
+              src="/sushi8.webp"
               alt="Premium sushi selection"
               className="rounded-2xl w-full h-64 object-cover shadow-soft"
             />

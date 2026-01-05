@@ -6,29 +6,29 @@ export const Gallery = () => {
 
   const galleryItems = [
     {
-      image: '/yume.jpg',
+      image: '/yume.webp',
       label: translations.gallery.mainHall,
       alt: 'Main Hall'
     },
     {
-      image: '/yume2.jpg',
+      image: '/yume2.webp',
       label: translations.gallery.omakase,
       alt: 'Omakase Counter'
     },
     {
-      image: '/yume3.jpg',
+      image: '/yume3.webp',
       label: translations.gallery.plating,
       alt: 'Fresh Plating'
     },
     {
-      image: '/yume4.jpg',
+      image: '/yume4.webp',
       label: translations.gallery.bar,
       alt: 'Bar Area'
     },
   ];
 
   return (
-    <section className="py-24 overflow-hidden bg-gradient-to-b from-gold-tint via-warm-white to-gold-tint relative bg-luxury-pattern">
+    <section className="pt-8 sm:pt-12 md:pt-24 pb-12 sm:pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-gold-tint via-warm-white to-gold-tint relative bg-luxury-pattern">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20"></div>
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-luxury-gold/7 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>

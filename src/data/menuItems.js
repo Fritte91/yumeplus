@@ -11,15 +11,15 @@
  */
 
 const placeholderImages = [
-  "/sashimi.jpg",
-  "/sushi1.jpg",
-  "/sushi2.jpg",
-  "/shrimp1.jpg",
-  "/shrimp2.jpg",
-  "/salmon1.jpg",
-  "/eat1.jpg",
-  "/eating1.jpg",
-  "/dessert1.jpg"
+  "/sashimi.webp",
+  "/sushi1.webp",
+  "/sushi2.webp",
+  "/shrimp1.webp",
+  "/shrimp2.webp",
+  "/salmon1.webp",
+  "/eat1.webp",
+  "/eating1.webp",
+  "/dessert1.webp"
 ];
 
 const pickImg = (i) => placeholderImages[i % placeholderImages.length];
@@ -174,7 +174,7 @@ export const menuItems = [
       en: "Enjoy unlimited draft beer during your dining time.",
       th: "เบียร์สดไม่อั้นตลอดเวลาที่ทาน"
     },
-    image: "/beer.jpg",
+    image: "/beer.webp",
     imageAlt: { en: "Draft beer glass", th: "แก้วเบียร์สด" },
     badge: { en: "Premium", th: "พรีเมียม" },
     tag: { en: "Beer • Unlimited", th: "เบียร์ • ไม่อั้น" }
@@ -187,7 +187,7 @@ export const menuItems = [
       en: "Fresh tuna sashimi — clean flavor and smooth texture.",
       th: "ซาชิมิทูน่าสด รสนุ่มละมุน"
     },
-    image: "/sashimi.jpg",
+    image: "/sashimi.webp",
     imageAlt: { en: "Tuna sashimi", th: "ซาชิมิทูน่า" },
     badge: { en: "Premium", th: "พรีเมียม" },
     tag: { en: "Sashimi • Raw", th: "ซาชิมิ • ดิบ" }
@@ -315,7 +315,7 @@ export const menuItems = [
       en: "Fresh salmon sashimi arranged in a cake-style platter for special occasions. Savory, elegant, and made-to-order.",
       th: "แซลมอนซาชิมิจัดเป็นเค้กสำหรับโอกาสพิเศษ ไม่หวาน เป็นอาหารคาว ต้องพรีออเดอร์"
     },
-    image: "/cake1.jpg",
+    image: "/cake1.webp",
     imageAlt: { 
       en: "Salmon sashimi cake platter", 
       th: "แซลมอนซาชิมิเค้ก" 
@@ -334,7 +334,7 @@ export const menuItems = [
       en: "Premium salmon sashimi cake with rose centerpiece — perfect as a surprise or gift. Made-to-order.",
       th: "เค้กแซลมอนซาชิมิจัดพรีเมียม พร้อมกุหลาบตรงกลาง เหมาะเป็นของขวัญ (ต้องพรีออเดอร์)"
     },
-    image: "/cake2.jpg",
+    image: "/cake2.webp",
     imageAlt: { 
       en: "Salmon sashimi cake with rose centerpiece", 
       th: "แซลมอนซาชิมิเค้กกุหลาบ" 
@@ -353,7 +353,7 @@ export const menuItems = [
       en: "Heart-shaped salmon sashimi cake designed for anniversaries and celebrations. Pre-order required.",
       th: "เค้กแซลมอนซาชิมิทรงหัวใจ สำหรับวันครบรอบและงานฉลอง (ต้องพรีออเดอร์)"
     },
-    image: "/cake3.jpg",
+    image: "/cake3.webp",
     imageAlt: { 
       en: "Heart-shaped salmon sashimi cake", 
       th: "แซลมอนซาชิมิเค้กทรงหัวใจ" 
@@ -372,7 +372,7 @@ export const menuItems = [
       en: "Salmon sashimi cake presented in a gift box with ribbon — savory, elegant, and memorable.",
       th: "เค้กแซลมอนซาชิมิจัดเป็นกล่องของขวัญ พร้อมริบบิ้น สวยพร้อมมอบ (ต้องพรีออเดอร์)"
     },
-    image: "/cake4.jpg",
+    image: "/cake4.webp",
     imageAlt: { 
       en: "Boxed salmon sashimi cake", 
       th: "แซลมอนซาชิมิเค้กกล่องของขวัญ" 

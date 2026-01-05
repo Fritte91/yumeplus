@@ -7,7 +7,7 @@ export const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Yume Plus Sushi",
-    "image": "https://yumeplussushi.com/yume.jpg",
+    "image": "https://yumeplussushi.com/yume.webp",
     "@id": "https://yumeplussushi.com",
     "url": "https://yumeplussushi.com",
     "telephone": "+66982878284",

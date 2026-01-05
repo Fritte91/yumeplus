@@ -74,3 +74,4 @@ export const ImageLightbox = ({ isOpen, onClose, image, title, caption }) => {
   );
 };
 
+

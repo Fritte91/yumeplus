@@ -102,11 +102,9 @@ platinumFeatures: [
   amenities: {
     title: "Dining Comfort",
     parking: "Free Parking",
-    vipRooms: "VIP Rooms",
     wifi: "Fast Wi-Fi",
     timeLimit: "90 Min Limit",
-    bingsu: "Bingsu Bar",
-    cards: "Cards Accepted"
+    cards: "Cards Accepted",
   },
   // Gallery
   gallery: {
@@ -247,7 +245,7 @@ platinumFeatures: [
     features: [
       "Premium fresh salmon, hand-selected daily",
       "Customizable designs for any occasion",
-      "Made-to-order with 48-hour advance notice",
+      "Made-to-order with 96-hour advance notice",
       "Perfect for birthdays, anniversaries, and celebrations",
       "Elegant presentation that impresses"
     ],
@@ -255,7 +253,7 @@ platinumFeatures: [
       title: "How to Order",
       step1: {
         title: "Contact Us",
-        description: "Reach out via LINE at least 48 hours before your event"
+        description: "Reach out via LINE at least 96 hours before your event"
       },
       step2: {
         title: "Customize",

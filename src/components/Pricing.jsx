@@ -28,7 +28,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section id="prices" className="py-24 bg-gradient-to-b from-gold-50/40 via-gold-100/30 to-gold-50/40 border-t border-brand-200 relative bg-luxury-pattern overflow-hidden">
+    <section id="prices" className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-b from-gold-50/40 via-gold-100/30 to-gold-50/40 border-t border-brand-200 relative bg-luxury-pattern overflow-hidden">
       {/* Decorative gold accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-30"></div>
       {/* Decorative background blobs */}
@@ -36,7 +36,7 @@ export const Pricing = () => {
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-l from-gold-200/10 to-transparent rounded-full blur-3xl translate-x-1/2"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl text-brand-900 tracking-tight mb-4">
             {translations.pricing.title}
           </h2>
@@ -46,7 +46,7 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing Tiers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 sm:mb-12">
           {tiers.map((tier, index) => (
             <div
               key={index}
@@ -102,9 +102,9 @@ export const Pricing = () => {
         </div>
 
         {/* Promotion Section */}
-        <div className="mt-12 pt-8 text-center">
-          <div className="section-divider mb-8"></div>
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 luxury-badge rounded-full px-8 py-4 shadow-gold">
+        <div className="mt-6 sm:mt-12 pt-4 sm:pt-8 text-center">
+          <div className="section-divider mb-4 sm:mb-8"></div>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 luxury-badge rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-gold">
             <span className="inline-flex items-center gap-2 text-luxury-gold-dark font-semibold text-sm">
               <span className="iconify" data-icon="lucide:tag" data-width="18"></span>
               {translations.pricing.promotion}

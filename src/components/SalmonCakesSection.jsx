@@ -12,25 +12,25 @@ export const SalmonCakesSection = () => {
 
   const galleryItems = [
     {
-      src: '/cake1.jpg',
+      src: '/cake1.webp',
       alt: 'Salmon cake platter',
       title: translations.salmonCakes.gallery.items[0].title,
       caption: translations.salmonCakes.gallery.items[0].caption
     },
     {
-      src: '/cake2.jpg',
+      src: '/cake2.webp',
       alt: 'Celebration salmon cake',
       title: translations.salmonCakes.gallery.items[1].title,
       caption: translations.salmonCakes.gallery.items[1].caption
     },
     {
-      src: '/cake3.jpg',
+      src: '/cake3.webp',
       alt: 'Custom salmon cake design',
       title: translations.salmonCakes.gallery.items[2].title,
       caption: translations.salmonCakes.gallery.items[2].caption
     },
     {
-      src: '/cake4.jpg',
+      src: '/cake4.webp',
       alt: 'Premium salmon selection',
       title: translations.salmonCakes.gallery.items[3].title,
       caption: translations.salmonCakes.gallery.items[3].caption

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
 import { BookTableModal } from './BookTableModal';
+import { links } from '../config/links';
 
 export const Header = () => {
   const { translations } = useLanguage();
@@ -109,9 +110,42 @@ export const Header = () => {
             </button>
           }
         />
-        <div className="mt-4 pt-6 border-t border-brand-100">
+        <div className="mt-4 pt-6 border-t border-brand-100 space-y-3">
           <a href="tel:+66982878284" className="flex items-center gap-3 text-accent-600 py-2">
             <span className="iconify" data-icon="lucide:phone" data-width="20"></span> +66 98 287 8284
+          </a>
+          <a
+            href={links.lineOfficial}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-3 text-white bg-[#06C755] hover:bg-[#05b64d] py-3 rounded-lg font-medium transition shadow-sm"
+            aria-label="Book via Line"
+          >
+            <span className="iconify" data-icon="simple-icons:line" data-width="20"></span>
+            <span>{translations.location.bookLine}</span>
+          </a>
+          <a
+            href={links.grabFood}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-3 text-white bg-[#00B14F] hover:bg-[#009944] py-3 rounded-lg font-medium transition shadow-sm"
+            aria-label="Order on Grab"
+          >
+            <span className="iconify" data-icon="simple-icons:grabfood" data-width="20"></span>
+            <span>{translations.hero.grabFood}</span>
+          </a>
+          <a
+            href={links.googleReviews}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-3 text-white bg-gradient-to-r from-[#4285F4] to-[#34A853] hover:from-[#357AE8] hover:to-[#2E8E47] py-3 rounded-lg font-medium transition shadow-sm"
+            aria-label="View Google Reviews"
+          >
+            <span className="iconify" data-icon="simple-icons:google" data-width="20"></span>
+            <span>{translations.reviews.viewAll}</span>
           </a>
         </div>
       </div>
